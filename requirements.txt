@@ -1,0 +1,22 @@
+# Data handling
+numpy
+pandas
+Pillow
+
+# Traditional ML (E2 - SVM baseline)
+scikit-learn
+scikit-image      # for LBP, HOG feature extraction
+opencv-python      # for HSV histogram
+
+# Deep Learning (E1, E3 - ResNet50)
+torch
+torchvision
+
+# Interpretability (E4)
+grad-cam           # pytorch-grad-cam library
+matplotlib
+seaborn
+
+# Utilities
+tqdm
+pyyaml
