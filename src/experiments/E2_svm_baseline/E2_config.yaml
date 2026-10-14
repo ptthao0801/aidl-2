@@ -1,0 +1,20 @@
+# E2_config.yaml
+
+data:
+  train_csv: "data/splits/trashnet_train.csv"
+  test_csv: "data/splits/trashnet_test.csv"         
+  crossdomain_csv: "data/splits/realwaste_test.csv"   
+  feature_cache_dir: "outputs/feature_cache"          
+svm:
+  kernel: "rbf"
+  gridsearch:
+    C: [0.1, 1, 10, 100]
+    gamma: ["scale", "auto"]
+  cv_folds: 5
+  class_weight: "balanced"
+
+output:
+  model_dir: "outputs/checkpoints"
+  table_dir: "outputs/tables"
+  figure_dir: "outputs/figures"
+  log_dir: "outputs/logs"

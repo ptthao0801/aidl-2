@@ -1,0 +1,22 @@
+# E4_config.yaml
+data:
+  trashnet_test_features_cache: "outputs/feature_cache/E2_features_trashnet_test.npz"
+  realwaste_features_cache: "outputs/feature_cache/E2_features_realwaste_test.npz"
+
+bootstrap:
+  n_resamples: 1000
+  confidence_level: 0.95
+  random_seed: 42
+
+gradcam:
+  target_layer: "layer4"   # layer cuối ResNet50 trước Global Average Pooling
+  n_samples_per_panel: 2  
+
+tsne:
+  perplexity: 30
+  random_seed: 42
+  max_samples_per_domain: 800 
+
+output:
+  table_dir: "outputs/tables"
+  figure_dir: "outputs/figures"

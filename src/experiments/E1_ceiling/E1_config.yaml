@@ -1,0 +1,37 @@
+# E1_config.yaml
+
+data:
+  train_csv: "data/splits/trashnet_train.csv"
+  val_csv: "data/splits/trashnet_val.csv"
+  test_csv: "data/splits/trashnet_test.csv"
+  image_size: 224          # ImageNet pretrained input
+
+model:
+  backbone: "resnet50"
+  pretrained: true
+  num_classes: 5
+
+training:
+  epochs: 100             
+  batch_size: 32
+  num_workers: 8           
+  optimizer: "adamw"
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  scheduler: "cosine_annealing"
+  early_stopping_patience: 5
+  early_stopping_stop_metric: "val_loss"
+  checkpoint_select_metric: "val_macro_f1"
+
+augmentation:
+  random_horizontal_flip: true
+  random_rotation_degrees: 15
+  color_jitter: true
+  color_jitter_strength: 0.1  
+seeds: [42, 123, 456]
+
+output:
+  checkpoint_dir: "outputs/checkpoints"
+  log_dir: "outputs/logs"
+  table_dir: "outputs/tables"
+  figure_dir: "outputs/figures"

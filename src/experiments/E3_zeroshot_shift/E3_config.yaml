@@ -1,0 +1,10 @@
+# E3_config.yaml
+# same image_size, batch_size, num_workers, model config from E1_config.yaml 
+
+data:
+  realwaste_csv: "data/splits/realwaste_test.csv"
+
+output:
+  table_dir: "outputs/tables"
+  figure_dir: "outputs/figures"
+  log_dir: "outputs/logs"
