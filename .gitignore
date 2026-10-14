@@ -5,4 +5,8 @@ __pycache__/
 data/
 runs/
 .ipynb_checkpoints/
-outputs/
+outputs/*
+
+!outputs/figures/
+!outputs/logs/
+!outputs/tables/
