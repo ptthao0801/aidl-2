@@ -2,7 +2,6 @@ venv/
 __pycache__/
 *.pth
 *.ckpt
-data/
 runs/
 .ipynb_checkpoints/
 outputs/*
